@@ -39,14 +39,14 @@
       position: relative;
       padding: 15px 0 0;
       margin-top: 80px; /* Leave space for the Dictionary logo */
-      width: 50%;
+      width: 70%; /* Increase width to make it longer */
       margin-bottom: 20px;
     }
 
     /* Form field */
     .form__field {
       font-family: inherit;
-      width: 100%;
+      width: 100%; /* Ensure the input field fills the entire width of the form group */
       border: 0;
       border-bottom: 2px solid var(--gray);
       outline: 0;
@@ -130,40 +130,26 @@
       margin: 0; /* Ensure body doesn't have default margin */
     }
 
-    /* Result styling */
-    .result {
-      margin-top: 20px;
-      font-size: 1.5rem;
-      color: var(--highlight); /* Highlighted color for results */
-      animation: fadeIn 1s ease-in-out; /* Result fade-in effect */
-    }
-
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
   </style>
 </head>
 <body>
 
   <!-- Dictionary Logo and Text -->
   <div class="dictionary-logo">
-    <img src="imeges/research.png" alt="Logo" class="logo-image">
+    <img src="images/research.png" alt="Logo" class="logo-image">
     Dictionary
   </div>
 
   <!-- Form Group -->
-  <div class="form__group field">
-    <input type="input" class="form__field" placeholder="Enter a word" name="word" id="word" required />
-    <label for="word" class="form__label">Enter a word</label>
-  </div>
+  <form action="info.php" method="post">
+    <div class="form__group field">
+      <input type="input" class="form__field" placeholder="Enter a word" name="word" id="word" required />
+      <label for="word" class="form__label">Enter a word</label>
+    </div>
 
-  <!-- Search Button -->
-  <button class="search-btn">Search</button>
+    <!-- Search Button -->
+    <button type="submit" class="search-btn">Search</button>
+  </form>
 
 </body>
 </html>
